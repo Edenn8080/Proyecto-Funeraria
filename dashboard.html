@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperativa CECODIFEMI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"> 
+
+       </head>
+
+
+    <body> 
+
+    <header>
+        <h1>Bienvenido <i class="fas fa-globe icon"></i></h1>
+        <img src="descarga.jpeg" alt="Logo" class="logo">
+        <div class="notifications">
+            <i class="fas fa-bell bell"></i>
+        </div>
+        <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+    <nav>
+        <a href="#facturas"><i class="fas fa-file-invoice-dollar icon"></i>Facturas</a>
+        <a href="#montos"><i class="fas fa-coins icon"></i>Montos</a>
+        <a href="#suscripciones"><i class="fas fa-calendar-check icon"></i>Suscripciones</a>
+        <a href="#pagos"><i class="fas fa-credit-card icon"></i>Pagos</a>
+        <a href="#clientes"><i class="fas fa-users icon"></i>Clientes</a>
+        <a href="#datos-personales"><i class="fas fa-user icon"></i>Datos Personales</a>
+    </nav>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button>Buscar</button>
+        </div>
+        <h2>Contáctanos <i class="fas fa-phone icon"></i></h2>
+        <p>+58 04124712053</p>
+        <div class="images">
+            <img src="2024-11-01 (1).jpg" alt="Imagen 1">
+            <img src="2024-11-01.jpg" alt="Imagen 2">
+        </div>
+        <section id="facturas" onclick="location.href='facturas.html'">
+            <h3>Facturas</h3>
+            <p>Aquí podrás gestionar todas tus facturas.</p>
+        </section>
+        <section id="montos" onclick="location.href='montos.html'">
+            <h3>Montos</h3>
+            <p>Consulta los montos totales de tus transacciones.</p>
+        </section>
+        <section id="suscripciones" onclick="location.href='suscripciones.html'">
+            <h3>Suscripciones</h3>
+            <p>Maneja tus suscripciones y servicios contratados.</p>
+        </section>
+        <section id="pagos" onclick="location.href='pagos.html'">
+            <h3>Pagos</h3>
+            <p>Realiza y gestiona tus pagos de manera sencilla.</p>
+        </section>
+        <section id="clientes" onclick="location.href='clientes.html' ">
+            <h3>Contactos</h3>
+        <p>Gestiona y crea contactos de clientes por esta vía</p>
+        </section>
+        "
+</body>

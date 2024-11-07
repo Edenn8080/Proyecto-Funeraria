@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Suscripciones de Clientes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            transition: box-shadow 0.5s;
+        }
+        .container:hover {
+            box-shadow: 0 0 30px rgba(0,0,0,0.2);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .actions .add-subscription {
+            background: #28a745;
+            color: white;
+        }
+        .actions .export-subscriptions {
+            background: #17a2b8;
+            color: white;
+        }
+        .contract-details {
+            font-size: 0.9em;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            table, th, td {
+                display: block;
+            }
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Suscripciones de Clientes <i class="fas fa-calendar-check icon"></i></h1>
+    </header>
+    <div class="container">
+        <div class="actions">
+            <button class="add-subscription" onclick="addSubscription()"><i class="fas fa-plus"></i> Añadir Suscripción</button>
+            <button class="export-subscriptions" onclick="exportSubscriptions()"><i class="fas fa-file-export"></i> Exportar Suscripciones</button>
+        </div>
+        <table id="subscriptionsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Fin</th>
+                    <th>Descripción</th>
+                    <th>Monto</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan Pérez</td>
+                    <td>2024-01-01</td>
+                    <td>2024-12-31</td>
+                    <td class="contract-details">Servicio de Hosting Anual</td>
+                    <td>$100.00</td>
+                    <td>Activa</td>
+                    <td>
+                        <button class="edit" onclick="editSubscription(1)"><i class="fas fa-edit"></i></button>
+                        <button class="delete" onclick="deleteSubscription(1)"><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+                <!-- Más filas aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function addSubscription() {
+            alert('Función para añadir suscripción aún no implementada.');
+        }
+        function exportSubscriptions() {
+            alert('Función para exportar suscripciones aún no implementada.');
+        }
+        function editSubscription(id) {
+            alert('Función para editar la suscripción con ID: ' + id);
+        }
+        function deleteSubscription(id) {
+            if (confirm('¿Está seguro de que desea eliminar la suscripción con ID: ' + id + '?')) {
+                alert('Suscripción eliminada.');
+            }
+        }
+    </script>
+</body>
+</html>
